@@ -1,0 +1,55 @@
+.profile-image-frame {
+    width: 170px;
+    height: 170px;
+    background: black;
+    margin: 0 auto;
+    border: 4px solid green;
+    border-radius: 50%;
+}
+
+.profile-image-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.profile-nick {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.diviser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-align: center;
+    flex-direction: row;
+    font-weight: 600;
+    border-top: 1px solid purple;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.diviser div {
+    padding: 10px;
+    border-top: 1px solid black;
+}
+
+.image-frame {
+    width: 325px;
+    height: 325px;
+    background-color: purple;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+}
