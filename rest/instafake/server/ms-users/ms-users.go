@@ -39,12 +39,16 @@ func getOneUser(w http.ResponseWriter, r *http.Request) {
 	key := vars["id"]
 	var id int
 	id, _ = strconv.Atoi(key)
-
-	for _, user := range Users {
+	user := make([]User, 0)
+	var kf int
+	for key, user := range Users {
 		if user.ID == id {
-			json.NewEncoder(w).Encode(user)
+			kf = key
+			break
 		}
 	}
+	user = append(user, Users[kf])
+	json.NewEncoder(w).Encode(user)
 }
 
 func handleRequests() {
