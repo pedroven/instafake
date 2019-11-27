@@ -92,11 +92,11 @@ func getImages(w http.ResponseWriter, r *http.Request) {
 func getOneImage(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	key := vars["id"]
-	_, err := os.Stat("./source/" + key + ".png")
+	_, err := os.Stat("./source/" + key + ".jpg")
 	if os.IsNotExist(err) {
 		os.Exit(1)
 	}
-	imgFile, err := os.Open("./source/" + key + ".png")
+	imgFile, err := os.Open("./source/" + key + ".jpg")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
