@@ -12,21 +12,22 @@ import (
 type User struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
-	Login    string `json:"login"`
+	NickName    string `json:"nick"`
 	Password string `json:"password"`
+	Description string `json:"description"`
 }
 
 type allUsers []User
 
 var Users = allUsers{
 	{
-		ID: 1, Name: "John", Login: "john1", Password: "johnps",
+		ID: 1, Name: "John Wick", NickName: "johnwick", Password: "johnw", Description: "Don´t mess with my dog",
 	},
 	{
-		ID: 2, Name: "Mary", Login: "mary2", Password: "maryps",
+		ID: 2, Name: "Ray", NickName: "raySue", Password: "raysue", Description: "I owned the jedi",
 	},
 	{
-		ID: 3, Name: "Lia", Login: "lia3", Password: "liaps",
+		ID: 3, Name: "Kilo Ren", NickName: "kilo_ren", Password: "kiloRen", Description: "I love my Grandfather",
 	},
 }
 
