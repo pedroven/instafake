@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./profile/Profile";
+import Header from "../components/Header";
 
 class Layout extends Component {
   render() {
     return (
+      <>
+      <Header />
       <div>
         <Router>
           <Switch>
@@ -12,6 +15,8 @@ class Layout extends Component {
           </Switch>
         </Router>
       </div>
+      <footer className="footer"></footer>
+      </>
     );
   }
 }

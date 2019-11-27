@@ -2,11 +2,11 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-const ImageCard = () => {
+const ImageCard = (props) => {
     return (
         <div className="col-4">
             <div className="image-frame">
-                {/* <img src="https://picsum.photos/200"/> */}
+                <img src={props.image}/>
             </div>
         </div>
     );

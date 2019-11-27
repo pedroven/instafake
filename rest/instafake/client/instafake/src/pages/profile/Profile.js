@@ -33,15 +33,21 @@ export default class Profile extends Component {
       };
     
       imageSource = (dataImg) => {
-          return `data:image/png;base64,${dataImg}`
+          return `data:image/jpeg;base64,${dataImg}`
       }
 
       profileImages = (dataArray) => {
-          return dataArray.slice(2);
+          const newArray = dataArray.slice(2);
+          let imgArray = [];
+          newArray.forEach(img => {
+              imgArray.push(`data:image/jpeg;base64,${img.imageData}`)
+          });
+          return imgArray;
       }
 
   render() {
     const { user, profileImage, images } = this.state;
+    console.log(images);
     return (
         <>
             {!!user && (
@@ -53,9 +59,9 @@ export default class Profile extends Component {
                             </div>
                         </div>
                         <div className="col-4 ml-4">
-                            <h1 className="profile-nick">{user.name}</h1>
-                            <p className="profile-name">Teste</p>
-                            <p className="profile-defenition">Professional Serial Killer</p>
+                            <h1 className="profile-nick">{user.nick}</h1>
+                            <p className="profile-name">{user.name}</p>
+                            <p className="profile-defenition">{user.description}</p>
                         </div>
                     </div>
                     <div className="row diviser">
