@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  users:
+    build: ./server/ms-users
+    ports:
+      - 7777:7777
+
+  images:
+    build: ./server/ms-images
+    ports:
+      - 8888:8888
+
+  gateway:
+    build: ./server/gateway
+    ports:
+      - 5000:5000
+    depends_on:
+      - users
+      - images
